@@ -20,7 +20,9 @@ class GameException : public std::exception
 {
 public:
   GameException(const char* what)
-    : std::exception(what) {}
+    : str_err(what) {}
+  const char* what() const throw() {return str_err;}
+  const char* str_err;
 };
 
 class InvalidMoveGameException : public GameException

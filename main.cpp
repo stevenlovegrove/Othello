@@ -141,7 +141,7 @@ void Mouse(int button, int state, int x, int y)
   glutPostRedisplay();
 }
 
-void main(int argc, char** argv)
+int main(int argc, char** argv)
 {
   // GLUT Window Initialization:
   glutInit(&argc, argv);
@@ -158,4 +158,5 @@ void main(int argc, char** argv)
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
   glutMainLoop();
+  return 0;
 }
